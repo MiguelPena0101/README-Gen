@@ -53,10 +53,54 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    const content = `
+    # ${data.title}
+    
+    ## Table of Contents
+    - [Description](#description)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contributing](#contributing)
+    - [Tests](#tests)
+    - [Questions](#questions)
+    
+    ## Description
+    ${data.description}
+    
+    ## Installation
+    ${data.installation}
+    
+    ## Usage
+    ${data.usage}
+    
+    ## License
+    This project is licensed under the ${data.license} License.
+    
+    ## Contributing
+    ${data.contributing}
+    
+    ## Tests
+    ${data.tests}
+    
+    ## Questions
+    If you have any questions, please contact me at [${data.email}](mailto:${data.email}). You can also find me on GitHub: [${data.github}](https://github.com/${data.github}).
+      `;
+      
+      fs.writeFile(fileName, content, (err) =>
+        err ? console.error(err) : console.log('README.md has been generated!')
+      );
+    
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then((answers) => {
+      writeToFile('README.md', answers);
+    });
+}
 
 // Function call to initialize app
 init();
