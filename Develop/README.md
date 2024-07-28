@@ -1,6 +1,8 @@
 
     # README Generator
     
+    ![Working README Generator](/images/ss.png)
+
     ## Table of Contents
     - [Description](#description)
     - [Installation](#installation)
