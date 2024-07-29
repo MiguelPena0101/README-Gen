@@ -16,7 +16,7 @@ The README Generator is a command-line application designed to help developers q
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/readme-generator.git
+   git clone git@github.com:MiguelPena0101/README-Gen.git
 2. Navigate to project's directory
 3. install required npm packages: 'npm i inquirer@8.2.4'
 4. Run the application using Node.js: 'node index.js'
